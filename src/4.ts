@@ -19,19 +19,19 @@ class Key {
     this.signature = Math.random();
   }
 
-  getSignature() {
+  getSignature(): number {
     return this.signature;
   }
 }
 
 class Person {
   private key: Key;
-  
+
   constructor(key: Key) {
     this.key = key;
   }
 
-  getKey() {
+  getKey(): Key {
     return this.key;
   }
 }
@@ -47,7 +47,7 @@ abstract class House {
     this.key = key;
   }
 
-  public comeIn(person: Person) {
+  public comeIn(person: Person): void {
     if (this.door) {
       this.tenants.push(person);
     }
